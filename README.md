@@ -1,36 +1,32 @@
-# Gnome-Stats-Pro
+# System-Stats-Plus
 
 Miss programs only available on the Mac? So do we. Here's an extension
 for GNOME that brings easy visualization of system resources such as:
 
-* Per CPU core/processor utilization
-* RAM utilization
-* Swap memory utilization
-* Network utilization
+- Per CPU core/processor utilization
+- RAM utilization
+- Swap memory utilization
+- Network utilization
 
 In addition to utilization displayed in the tray, it offers drop down
 display of historical utilizations.
 
+## Motivation:
+
+This extension is based on a fork of the [Gnome-Stats-Pro](https://github.com/tpenguin/gnome-stats-pro) extension created by Joseph Benden (@tpenguin). Given that there have been no updates or bug fixes, with pending Pull Requests in his repository since GNOME version 3.38, I found myself quite fond of it on my desktop. Hence, I dedicated some time to port this extension to GNOME 45.
+
 ## Requirements
 
-* libgtop
-  * Ubuntu 17.04 users should install the `gir1.2-gtop-2.0` package.
+- Gnome 45
 
 ## How to Download
 
-* [Gnome-Stats-Pro](https://extensions.gnome.org/extension/1043/gnomestatspro/) is available on GNOME's Extension Repository.
-* [Gnome-Stats-Pro](https://github.com/tpenguin/gnome-stats-pro) is available on GitHub.
-* [Gnome-Stats-Pro](http://cgit.benden.us/cgit.cgi/gnome-stats-pro/) is also available locally on this server, in case the others are non-functional.
-
-## Known Bugs
-
-* libgtop has a bug with memory usage with Linux. This is fixed within
-  libgtop's master branch at commit c33623c0 from 2015-07-14.
+- [System-Stats-Plus](https://github.com/remulocosta/system-stats-plus) is available on GitHub.
 
 ## Support
 
 Support is available through the GitHub project page
-[here](https://github.com/tpenguin/gnome-stats-pro/issues).
+[here](https://github.com/remulocosta/system-stats-plus/issues).
 
 Please note this is a open-source, community project, and thus
 no guarantees on response time is implied.
@@ -42,6 +38,6 @@ improvements.
 
 ## License
 
-**Gnome Stats Pro** is an open-source project and is licensed under
+**Gnome Stats Plus** is an open-source project and is licensed under
 the GPL version 2 or higher. For more information on how this project
 is licensed, see the included `LICENSE.md` file.
