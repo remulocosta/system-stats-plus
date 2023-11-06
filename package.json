@@ -1,0 +1,43 @@
+{
+  "name": "system-stats-plus",
+  "version": "0.0.1",
+  "description": "System monitor showing CPU and memory usage. (forked from https://github.com/tpenguin/gnome-stats-pro)",
+  "main": "extension.js",
+  "scripts": {
+    "lint": "eslint ./src/",
+    "lint:fix": "eslint ./src/ --ext .js --fix",
+    "style:check": "prettier --check 'src/**/*.js'",
+    "style:fix": "prettier --write 'src/**/*.js'",
+    "view-logs": "journalctl --boot --grep system-stats-plus",
+    "watch-logs": "journalctl --boot --follow --grep system-stats-plus",
+    "watch-shell-logs": "journalctl /usr/bin/gnome-shell --follow"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remulocosta/system-stats-plus.git"
+  },
+  "keywords": [
+    "gnome",
+    "shell",
+    "extension",
+    "temp"
+  ],
+  "author": "Remulo Costa (remulo.costa@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/remulocosta/system-stats-plus/issues"
+  },
+  "homepage": "https://github.com/remulocosta/system-stats-plus",
+  "devDependencies": {
+    "eslint": "^8.3.0",
+    "eslint-config-gjs": "0.0.1",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsdoc": "^46.9.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "prettier": "^3.0.3"
+  }
+}
