@@ -1,6 +1,6 @@
 {
   "name": "system-stats-plus",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "System monitor showing CPU and memory usage. (forked from https://github.com/tpenguin/gnome-stats-pro)",
   "main": "extension.js",
   "scripts": {
