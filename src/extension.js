@@ -27,22 +27,7 @@ function mergeOptions(obj1, obj2) {
     return {...obj1, ...obj2};
 }
 
-// Number.prototype.formatMetricPretty = function (units) {
-//     let value = this;
-//     let metricPrefix = '';
-
-//     if (value > 1024 * 1024) {
-//         value /= 1024 * 1024;
-//         metricPrefix = 'Mi';
-//     } else if (value > 1024) {
-//         value /= 1024;
-//         metricPrefix = 'Ki';
-//     }
-
-//     return '%0.2f %s%s'.format(value, metricPrefix, units || '');
-// };
 function formatMetricPretty(value, units) {
-    // let value = this;
     let metricPrefix = '';
 
     if (value > 1024 * 1024) {
@@ -268,7 +253,6 @@ const HorizontalGraph = class StatsPlusHorizontalGraph {
         if (!cr) return;
 
         // Draw the background grid
-        // let color = new Clutter.Color(this.gridColor);
         let gridOffset = Math.floor(height / (INDICATOR_NUM_GRID_LINES + 1));
 
         this._drawGrid(cr, width, height, gridOffset);
@@ -1533,6 +1517,11 @@ const SystemStatsPlus = class StatsPlusExtension {
         if (this._showPopupTimeoutId > 0) {
             GLib.source_remove(this._showPopupTimeoutId);
             this._showPopupTimeoutId = 0;
+        }
+
+        if (this._resetHoverTimeoutId > 0) {
+            GLib.source_remove(this._resetHoverTimeoutId);
+            this._resetHoverTimeoutId = 0;
         }
 
         this._box.destroy();
